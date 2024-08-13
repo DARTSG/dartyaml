@@ -1,3 +1,3 @@
-# dartyaml README
+# dartyaml
 
-Handle yaml links and report errors when files don't exist.
+Handle dart's yaml links and report errors when files don't exist.
