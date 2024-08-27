@@ -3,7 +3,7 @@ import * as vscode from 'vscode';
 import * as path from 'path';
 import * as fs from 'fs';
 
-const pathRe = /^\s*-\s*(.*\.yml)\s*$/gm;
+const pathRe = /^\s*-\s*(.*\.[A-Za-z]+)\s*$/gm;
 
 
 export default class Provider implements vscode.DocumentLinkProvider {
