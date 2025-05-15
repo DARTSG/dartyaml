@@ -2,7 +2,7 @@
   "name": "dartyaml",
   "displayName": "dartyaml",
   "description": "",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "engines": {
     "vscode": "^1.92.0"
   },
