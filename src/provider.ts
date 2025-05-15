@@ -20,10 +20,10 @@ export default class Provider implements vscode.DocumentLinkProvider {
             const range = new vscode.Range(document.positionAt(match.index), document.positionAt(match.index + match[0].length));
             
             const uri = this.getPath(document, match[1]);
-            if (uri) {
+            if (uri && !match[1].startsWith("https://")) { // dont match web links
                 result.push(new vscode.DocumentLink(range, uri));
                 
-                // if file doesn't exists, report an error.
+                // if file doesn't exist, report an error.
                 if (!fs.existsSync(uri.fsPath)) {
                     diagnstics.push(new vscode.Diagnostic(range, `File ${uri.fsPath} not found`, vscode.DiagnosticSeverity.Error));
                 }
